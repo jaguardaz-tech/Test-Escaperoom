@@ -3,69 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission: Cabeceira Verde</title>
+    <title>Lehrer-Check: Operation Terra Incognita</title>
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #1a1a1a; color: #e0e0e0; line-height: 1.6; margin: 0; padding: 20px; }
-        .container { max-width: 900px; margin: auto; background: #2d2d2d; padding: 30px; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        h1 { color: #4CAF50; border-bottom: 2px solid #4CAF50; padding-bottom: 10px; }
-        #map { height: 450px; width: 100%; border-radius: 8px; margin: 20px 0; border: 2px solid #444; }
-        .puzzle-box { background: #3d3d3d; padding: 20px; border-left: 5px solid #4CAF50; margin-bottom: 20px; }
-        code { background: #000; padding: 2px 5px; color: #00ff00; }
-        .hint { font-size: 0.9em; color: #aaa; font-style: italic; }
+        body { font-family: 'Courier New', monospace; background: #0d1117; color: #58a6ff; margin: 0; padding: 20px; }
+        .container { max-width: 1000px; margin: auto; background: #161b22; padding: 30px; border-radius: 12px; border: 1px solid #30363d; box-shadow: 0 0 20px rgba(0,255,0,0.2); }
+        h1 { color: #238636; text-align: center; text-transform: uppercase; letter-spacing: 3px; }
+        #map { height: 500px; width: 100%; border-radius: 8px; margin: 20px 0; border: 1px solid #58a6ff; }
+        .puzzle-box { background: #0d1117; padding: 15px; border-left: 4px solid #238636; margin-bottom: 20px; color: #c9d1d9; }
+        .coords-display { background: rgba(0,0,0,0.8); color: #00ff00; padding: 10px; font-size: 14px; border-radius: 5px; border: 1px solid #238636; }
+        b { color: #f0883e; }
     </style>
 </head>
 <body>
 
 <div class="container">
-    <h1>Operation: Terra Incognita</h1>
-    <p>Willkommen, Kolleginnen und Kollegen. Die Exkursion nach Brasilien steht bevor, aber die Zielkoordinaten der <strong>Chácara Cabeceira Verde</strong> sind durch ein geodätisches Sicherheitsnetz geschützt.</p>
+    <h1>STRENG GEHEIM: Lehrkörper-Exkursion</h1>
+    <p>Werte Lehrkräfte, Ihre pädagogische Kompetenz ist gefragt. Bevor Sie die <b>Chácara Cabeceira Verde</b> in Brasilien erreichen, müssen Sie beweisen, dass Sie sich nicht nur in Lehrplänen, sondern auch im Gelände zurechtfinden.</p>
     
     <div id="map"></div>
 
     <div class="puzzle-box">
-        <h3>Schritt 1: Das UTM-Rätsel</h3>
-        <p>Ein Funkspruch fing folgende UTM-Daten ab (Zone 23L): <br>
-        <code>E: 254320 | N: 8278450</code><br>
-        Sucht diesen Ort auf der Karte. Welches markante geografische Merkmal befindet sich dort? <br>
-        <strong>Zahl A = Anzahl der Buchstaben des Merkmals (portugiesischer Name auf der Karte).</strong></p>
+        <h3>Aufgabe 1: Das UTM-Gitter</h3>
+        <p>Ein Späher meldet folgende UTM-Position (Zone 23L): <b>E: 254320 | N: 8278450</b>. <br>
+        Navigieren Sie mit der Maus dorthin. Welches Gewässer oder Merkmal sehen Sie? <br>
+        <b>Zahl A = Anzahl der Buchstaben (portugiesisch).</b></p>
     </div>
 
     <div class="puzzle-box">
-        <h3>Schritt 2: Die Azimut-Peilung</h3>
-        <p>Startet bei <code>15°33'12" S, 47°17'50" W</code>. <br>
-        Peilt von dort exakt <strong>135° (Südost)</strong> und folgt der Linie für ca. 3,5 km. <br>
-        Ihr stoßt auf eine Straßenkreuzung. Addiert die Ziffern der Straßennummer (falls vorhanden) oder nutzt die Quersumme der Sekunden der Zielkoordinate.<br>
-        <strong>Zahl B = Quersumme des Ergebnisses.</strong></p>
+        <h3>Aufgabe 2: Distanz-Messung</h3>
+        <p>Start: <b>15°33'12" S, 47°17'50" W</b>. <br>
+        Nutzen Sie das <b>Lineal-Tool</b> (Klick auf die Karte), um exakt <b>3,5 km</b> nach Südosten (135°) zu messen. <br>
+        <b>Zahl B = Quersumme der Sekunden der Ziel-Längenkoordinate.</b></p>
     </div>
 
-    <div class="puzzle-box">
-        <h3>Schritt 3: Die Dezimal-Falle</h3>
-        <p>Ein alter Logbuch-Eintrag nennt den Punkt: <code>-15.5562, -47.3115</code>.<br>
-        Vorsicht: In welcher Hemisphäre befinden wir uns? <br>
-        Identifiziert den Namen der nächstgelegenen Farm (Fazenda). <br>
-        <strong>Zahl C = Der 1. Buchstabe der Fazenda als Position im Alphabet (A=1).</strong></p>
-    </div>
-
-    <hr>
-    <h3>Finaler Tresor-Code</h3>
-    <p>Der Code ist vierstellig: <code>[Zahl A] [Zahl B] [Zahl C] [Prüfziffer]</code>.<br>
-    Die Prüfziffer ist die Differenz zwischen der Breitengrad-Minute und der Längengrad-Minute des Zentrums (Chácara Cabeceira Verde).</p>
+    <p style="text-align:center"><i>Hinweis: Klicken Sie auf die Karte, um eine Messlinie zu starten. Doppelklick beendet sie.</i></p>
 </div>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script>
-    // Zentrum: Chácara cabeceira verde (ca. -15.55, -47.30)
+    // Karte initialisieren
     var map = L.map('map').setView([-15.552, -47.305], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map);
 
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '© OpenStreetMap contributors'
-    }).addTo(map);
+    // --- KOORDINATEN ANZEIGE (Inkl. UTM Annäherung für das Rätsel) ---
+    var info = L.control({position: 'topright'});
+    info.onAdd = function (map) {
+        this._div = L.DomUtil.create('div', 'coords-display');
+        return this._div;
+    };
+    info.addTo(map);
 
-    // Marker für das Zentrum (optional, kann für das Rätsel auch versteckt werden)
-    var marker = L.marker([-15.552, -47.305]).addTo(map)
-        .bindPopup('Zielgebiet: Chácara Cabeceira Verde')
-        .openPopup();
+    map.on('mousemove', function(e) {
+        var lat = e.latlng.lat;
+        var lng = e.latlng.lng;
+        
+        // Einfache UTM-Annäherung für Zone 23L (nur für dieses Gebiet gültig!)
+        var utmE = Math.round((lng + 49.5) * 106000 + 500000); 
+        var utmN = Math.round((lat + 0) * 111000 + 10000000);
+
+        info._div.innerHTML = `LAT: ${lat.toFixed(4)} | LNG: ${lng.toFixed(4)}<br>UTM (23L): E ${utmE} | N ${utmN}`;
+    });
+
+    // --- EINFACHES MESS-TOOL ---
+    var polyline = L.polyline([], {color: '#f0883e', weight: 4}).addTo(map);
+    var measureMarker = L.popup();
+
+    map.on('click', function(e) {
+        var points = polyline.getLatLngs();
+        if (points.length >= 2) { 
+            polyline.setLatLngs([]); // Reset bei neuem Klick
+            points = [];
+        }
+        
+        polyline.addLatLng(e.latlng);
+        
+        if (polyline.getLatLngs().length === 2) {
+            var p1 = polyline.getLatLngs()[0];
+            var p2 = polyline.getLatLngs()[1];
+            var dist = (p1.distanceTo(p2) / 1000).toFixed(2);
+            
+            measureMarker
+                .setLatLng(e.latlng)
+                .setContent("Distanz: " + dist + " km")
+                .openOn(map);
+        }
+    });
+
 </script>
 
 </body>
